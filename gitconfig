@@ -1,0 +1,11 @@
+[user]
+	email = pztrick44@gmail.com
+	name = Patrick Paul
+[push]
+	default = simple
+[alias]
+	unstage = reset HEAD --
+	uncommit = reset --soft HEAD^
+	mup = !"git fetch origin -v; git fetch upstream -v; git merge upstream/master"
+[core]
+	editor = vim
