@@ -9,7 +9,7 @@ cd .files
 git submodule init
 git submodule update
 ```
-                         
+
 ### Set up your symbolic links
 ```
 ln -s .files/bashrc .bashrc
