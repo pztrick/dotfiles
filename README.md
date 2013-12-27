@@ -30,3 +30,9 @@ git commit -m 'Added plugin ~ plugin-name`
 ```
 git submodule foreach git pull origin master
 ```
+
+### Plugins Reference
+
+vim-togglemouse
+
+* *<F12>* toggles mouse focus between terminal cursor and vim cursor
