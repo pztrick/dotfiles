@@ -19,3 +19,10 @@ let g:solarized_termtrans=1 " this will use terminal background color instead
 se t_Co=16
 colorscheme solarized
 
+" shame tab characters visually
+set list
+set listchars=tab:>.,trail:.,extends:#,nbsp:.
+
+" don't shame tab characters in HTML
+autocmd filetype html,xml set listchars-=tab:>.
+
