@@ -11,3 +11,11 @@ start
 " column highlighting
 set cursorline
 set colorcolumn=80
+
+" solarized
+set background=dark " light | dark "
+let g:solarized_termcolors=256
+let g:solarized_termtrans=1 " this will use terminal background color instead
+se t_Co=16
+colorscheme solarized
+

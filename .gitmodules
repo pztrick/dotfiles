@@ -4,3 +4,6 @@
 [submodule "bundle/sensible"]
 	path = bundle/sensible
 	url = git://github.com/tpope/vim-sensible.git
+[submodule "bundle/colors-solarized"]
+	path = bundle/colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
