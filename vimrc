@@ -3,7 +3,7 @@ filetype plugin indent on
 syntax on
 
 " enable the mouse for cursor navigation
-" set mouse=a
+set mouse=a
 
 " start in INSERT mode
 start
