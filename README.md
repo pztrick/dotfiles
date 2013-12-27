@@ -35,4 +35,4 @@ git submodule foreach git pull origin master
 
 vim-togglemouse
 
-* *<F12>* toggles mouse focus between terminal cursor and vim cursor
+* `<F12>` toggles mouse focus between terminal cursor and vim cursor
