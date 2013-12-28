@@ -13,3 +13,6 @@
 [submodule "bundle/multiple-cursors"]
 	path = bundle/multiple-cursors
 	url = git://github.com/terryma/vim-multiple-cursors.git
+[submodule "bundle/airline"]
+	path = bundle/airline
+	url = git://github.com/bling/vim-airline
