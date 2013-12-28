@@ -26,3 +26,19 @@ set listchars=tab:>.,trail:.,extends:#,nbsp:.
 " don't shame tab characters in HTML
 autocmd filetype html,xml set listchars-=tab:>.
 
+" map ; to :
+nnoremap ; :
+
+" disable arrow keys (force use of hjkl)
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+
+" alias j and k to jump wrapped lines
+nnoremap j gj
+nnoremap k gk
+
+" alias ii to ESCAPE for command palette
+imap ii <ESC>
+
