@@ -2,6 +2,8 @@ execute pathogen#infect()
 filetype plugin indent on
 syntax on
 
+let mapleader=','
+
 " enable the mouse for cursor navigation
 set mouse=a
 
@@ -46,3 +48,6 @@ nnoremap k gk
 " alias jj to ESCAPE for command palette
 imap jj <C-c>
 inoremap <ESC> <nop>
+
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
