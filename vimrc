@@ -31,17 +31,18 @@ nnoremap ; :
 
 " disable arrow keys (force use of hjkl)
 map <up> <nop>
+imap <up> <nop>
 map <down> <nop>
+imap <down> <nop>
 map <left> <nop>
+imap <left> <nop>
 map <right> <nop>
+imap <right> <nop>
 
 " alias j and k to jump wrapped lines
 nnoremap j gj
 nnoremap k gk
 
 " alias jj to ESCAPE for command palette
-imap jj <ESC>
-
-" stop <ESC> from moving cursor one character to the left
-nnoremap i a
-
+imap jj <C-c>
+inoremap <ESC> <nop>
