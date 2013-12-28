@@ -36,3 +36,10 @@ git submodule foreach git pull origin master
 vim-togglemouse
 
 * `<F12>` toggles mouse focus between terminal cursor and vim cursor
+
+vim-multiple-cursors
+
+* `<C-n>` advances to next iteration of selection
+* `<C-x>` ignores current selection and advances to next
+* `<C-p>` returns to previous selection
+
