@@ -6,11 +6,11 @@ syntax on
 set mouse=a
 
 " start in INSERT mode
-start
+" start
 
 " column highlighting
 set cursorline
-set colorcolumn=80
+set colorcolumn=72
 
 " solarized
 set background=dark " light | dark "
@@ -39,6 +39,9 @@ map <right> <nop>
 nnoremap j gj
 nnoremap k gk
 
-" alias ii to ESCAPE for command palette
-imap ii <ESC>
+" alias jj to ESCAPE for command palette
+imap jj <ESC>
+
+" stop <ESC> from moving cursor one character to the left
+nnoremap i a
 
