@@ -4,6 +4,9 @@ syntax on
 
 let mapleader=','
 
+" wildignore
+set wildignore=*.pyc,*~
+
 " enable the mouse for cursor navigation
 set mouse=a
 
@@ -51,3 +54,7 @@ inoremap <ESC> <nop>
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
+
+" Map jj to canceling command T prompt -- not working
+let g:CommandTCancelMap=['<Esc>', '<C-c>', 'jj']
+
