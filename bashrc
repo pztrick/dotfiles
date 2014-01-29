@@ -142,3 +142,9 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # autoenv
 source /usr/local/bin/activate.sh
+
+# localrc
+if [ -f ~/localrc ]; then
+	. ~/localrc
+fi
+
