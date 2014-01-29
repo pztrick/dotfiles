@@ -1,0 +1,4 @@
+function xcp() {
+   cat "$1" | xclip -sel clip
+   }
+export -f xcp

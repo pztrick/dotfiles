@@ -148,3 +148,7 @@ if [ -f ~/localrc ]; then
 	. ~/localrc
 fi
 
+# functions
+if [ -f ~/.files/functions ]; then
+	. ~/.files/functions
+fi

@@ -5,6 +5,8 @@ alias d2m='git checkout master && git merge develop && git push && git checkout 
 alias ssar='sudo service apache2 restart'
 alias tail='tail -n 30'
 
+alias clipboard='xclip -sel clip'
+
 # Django management commands
 alias cs="python manage.py collectstatic --noinput"
 
