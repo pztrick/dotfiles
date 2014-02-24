@@ -11,3 +11,5 @@
 [core]
 	editor = vim
 	filemode = false
+[color]
+	ui = auto
