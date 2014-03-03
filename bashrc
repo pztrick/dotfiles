@@ -3,6 +3,13 @@ EDITOR=vim
 GIT_EDITOR=vim
 VISUAL=vim
 
+# Android ADT
+if [ -d /home/patrick/adt/ ]; then
+	PATH=$PATH:/home/patrick/adt/sdk/tools
+	PATH=$PATH:/home/patrick/adt/sdk/platform-tools
+	PATH=$PATH:/home/patrick/adt/bin
+fi
+
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -142,3 +149,13 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # autoenv
 source /usr/local/bin/activate.sh
+
+# localrc
+if [ -f ~/localrc ]; then
+	. ~/localrc
+fi
+
+# functions
+if [ -f ~/.files/functions ]; then
+	. ~/.files/functions
+fi
