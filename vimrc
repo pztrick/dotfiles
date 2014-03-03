@@ -10,6 +10,9 @@ set wildignore=*.pyc,*~
 " enable the mouse for cursor navigation
 set mouse=a
 
+" use yp to :set togglepaste=yes for one event
+nnoremap <silent> yp  :call <SID>setup_paste()<CR>a
+
 " start in INSERT mode
 " start
 
