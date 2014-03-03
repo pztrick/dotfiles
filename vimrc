@@ -10,8 +10,15 @@ set wildignore=*.pyc,*~
 " enable the mouse for cursor navigation
 set mouse=a
 
-" use yp to :set togglepaste=yes for one event
-nnoremap <silent> yp  :call <SID>setup_paste()<CR>a
+" automatically toggle (no)paste indents when pasting from clipboard
+let &t_SI .= "\<Esc>[?2004h"
+let &t_EI .= "\<Esc>[?2004l"
+inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
+function! XTermPasteBegin()
+  set pastetoggle=<Esc>[201~
+  set paste
+  return ""
+endfunction
 
 " start in INSERT mode
 " start
