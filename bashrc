@@ -159,3 +159,6 @@ fi
 if [ -f ~/.files/functions ]; then
 	. ~/.files/functions
 fi
+
+# paths
+export CDPATH=~/.files/paths
