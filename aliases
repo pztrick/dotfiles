@@ -1,6 +1,7 @@
 alias dsh='dsh -cM'
 alias pur='dsh -a ./pur.sh'
 alias mig='dsh -a ./mig.sh'
+alias tig='dsh -m patrick@zeltennia ./tig.sh'
 alias d2m='git checkout master && git merge develop && git push && git checkout develop'
 alias ssar='sudo service apache2 restart'
 alias tail='tail -n 30'
@@ -9,6 +10,10 @@ alias clipboard='xclip -sel clip'
 
 # Django management commands
 alias cs="python manage.py collectstatic --noinput"
+alias sm="python manage.py schemamigration"
+alias ms="python manage.py shell"
+alias mg="python manage.py migrate"
+alias dm="python manage.py datamigration"
 
 # Typical django/git workflow commands
 alias gup="echo -e '\n(1 of 3)\tgit pullall\n' && git pullall && echo -e '\n\n(2 of 3)\tpython manage.py collectstatic --noinput\n' && python manage.py collectstatic --noinput && echo -e '\n\n(3 of 3)\tpython manage.py migrate\n' && python manage.py migrate"
