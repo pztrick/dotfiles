@@ -16,7 +16,7 @@ alias ms="python manage.py shell_plus"
 alias mg="python manage.py migrate"
 alias dm="python manage.py datamigration"
 alias rs="python manage.py runserver 0.0.0.0:8000"
-alias tc="python manage.py test core"
+alias tc="python manage.py test --verbosity=2"
 
 # Typical django/git workflow commands
 alias gup="echo -e '\n(1 of 3)\tgit pullall\n' && git pullall && echo -e '\n\n(2 of 3)\tpython manage.py collectstatic --noinput\n' && python manage.py collectstatic --noinput && echo -e '\n\n(3 of 3)\tpython manage.py migrate\n' && python manage.py migrate"
