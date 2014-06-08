@@ -9,6 +9,9 @@ alias tail='tail -n 30'
 
 alias clipboard='xclip -sel clip'
 
+# ls updates
+alias ls='ls --hide="*.pyc"'
+
 # Django management commands
 alias cs="python manage.py collectstatic --noinput"
 alias sm="python manage.py schemamigration"
