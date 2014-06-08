@@ -5,3 +5,4 @@ bash vimrc.sh
 bash gitconfig.sh
 sudo apt-get install -y git
 git pullall
+sudo bash pip.sh

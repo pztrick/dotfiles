@@ -1,2 +1,1 @@
-sudo apt-get install -y python-software-properties
-sudo apt-get update
+sudo apt-get install -y python-software-properties python-pip

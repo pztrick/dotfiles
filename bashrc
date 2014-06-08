@@ -126,10 +126,12 @@ fi
 
 # Start ssh-agent and keychain
 # The `whoami` lines give the user and its sudo a separate ssh-agent process
-[ `whoami` == 'root' ] && HOME=/root
-/usr/bin/keychain --quiet $HOME/.ssh/id_rsa
-source $HOME/.keychain/$HOSTNAME-sh > /dev/null
-[ `whoami` == 'root' ] && HOME=~
+if [ -f /usr/bin/keychain ]; then
+	[ `whoami` == 'root' ] && HOME=/root
+	/usr/bin/keychain --quiet $HOME/.ssh/id_rsa
+	source $HOME/.keychain/$HOSTNAME-sh > /dev/null
+	[ `whoami` == 'root' ] && HOME=~
+fi
 # End ssh-agent and keychain
 
 # virtualenvwrapper
