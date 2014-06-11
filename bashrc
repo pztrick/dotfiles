@@ -146,8 +146,10 @@ source /usr/local/bin/virtualenvwrapper.sh
 # #
 
 # disable CTRL+S freeze
-stty ixany
-stty ixoff -ixon
+if [ ! -z "$PS1" ]; then
+    stty ixany
+    stty ixoff -ixon
+fi
 
 # RVM
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
