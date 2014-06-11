@@ -128,7 +128,7 @@ fi
 # The `whoami` lines give the user and its sudo a separate ssh-agent process
 if [ -f /usr/bin/keychain ]; then
 	[ `whoami` == 'root' ] && HOME=/root
-	/usr/bin/keychain --quiet $HOME/.ssh/id_rsa
+	/usr/bin/keychain --quiet --inherit any $HOME/.ssh/id_rsa
 	source $HOME/.keychain/$HOSTNAME-sh > /dev/null
 	[ `whoami` == 'root' ] && HOME=~
 fi
