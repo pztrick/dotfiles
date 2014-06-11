@@ -164,3 +164,8 @@ fi
 
 # paths
 export CDPATH=~/.files/paths
+
+# inforc print at the end
+if [ -f ~/.files/inforc ]; then
+	. ~/.files/inforc
+fi
