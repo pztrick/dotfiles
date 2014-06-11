@@ -59,10 +59,4 @@ fi
 }
 
 # function pushall
-function pushall {
-	git push
-	ssh zeltennia -C "cd .files && git pull"
-	ssh romulus -C "cd .files && git pull"
-	ssh remus -C "cd .files && git pull"
-	ssh eptax -C "cd .files && git pull"
-}
+alias pushall="dsh -a -- 'cd .files && git pull'"
