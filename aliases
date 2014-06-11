@@ -59,4 +59,4 @@ fi
 }
 
 # function pushall
-alias pushall="dsh -a -- 'cd .files && git pull'"
+alias pushall="source ~/.bashrc && dsh -a -- 'cd .files && git pull'"
