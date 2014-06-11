@@ -1,0 +1,6 @@
+# cache files
+*~
+
+# ide files
+*.sublime-project
+*.sublime-workspace

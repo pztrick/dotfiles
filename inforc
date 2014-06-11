@@ -1,3 +1,6 @@
+# If not running interactively, don't do anything
+[ -z "$PS1" ] && return
+
 echo "" # blank line
 
 # echo last git commit
