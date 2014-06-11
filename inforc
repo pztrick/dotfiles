@@ -12,7 +12,7 @@ cd $NOW_PATH
 
 # echo SSH key
 SSHKEY="$(ssh-add -l 2>&1)"
-if [ "$SSHKEY" == "Could not open a connection to your authentication agent." ]
+if [ "$SSHKEY" == "Could not open a connection to your authentication agent." ] || [ "$SSHKEY" == "The agent has no identities." ];
 then
 	echo -e "\e[31m\e[1m * * * \e[0mNO SSH KEY LOADED \e[31m\e[1m * * * \e[0m"
 else
