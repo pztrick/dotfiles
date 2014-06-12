@@ -70,7 +70,7 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-if [ ! -z "$PS1" ]; then
+if [ -n "$-" ]; then
     # Are we in an interactive terminal?
 
     # add colors to ps1 prompt
@@ -146,7 +146,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 # #
 
 # disable CTRL+S freeze
-if [ ! -z "$PS1" ]; then
+if [ -n "$-" ]; then
     stty ixany
     stty ixoff -ixon
 fi
@@ -160,7 +160,7 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 source /usr/local/bin/activate.sh
 
 # localrc
-if [ -f ~/.localrc ]; then
+if [ -n "$-" ] && [ -f ~/.localrc ]; then
 	. ~/.localrc
 fi
 
