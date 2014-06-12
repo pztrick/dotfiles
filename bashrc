@@ -160,8 +160,8 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 source /usr/local/bin/activate.sh
 
 # localrc
-if [ -f ~/localrc ]; then
-	. ~/localrc
+if [ -f ~/.localrc ]; then
+	. ~/.localrc
 fi
 
 # functions
