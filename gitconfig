@@ -11,5 +11,6 @@
 [core]
 	editor = vim
 	filemode = false
+	excludesfile = ~/.files/gitignore
 [color]
 	ui = auto

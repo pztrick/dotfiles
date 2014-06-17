@@ -1,0 +1,7 @@
+# global gitignore for IDE, etc
+# -- should still exclude project specific ignores in .gitignore
+
+# IDEs
+*.sublime-workspace
+*.sublime-project
+.env
