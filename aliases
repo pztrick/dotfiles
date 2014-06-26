@@ -24,6 +24,18 @@ alias tc="python manage.py test --verbosity=2"
 # Typical django/git workflow commands
 alias gup="echo -e '\n(1 of 3)\tgit pullall\n' && git pullall && echo -e '\n\n(2 of 3)\tpython manage.py collectstatic --noinput\n' && python manage.py collectstatic --noinput && echo -e '\n\n(3 of 3)\tpython manage.py migrate\n' && python manage.py migrate"
 
+# resetdb
+function resetdb {
+ if [ -z "$1" ]; then
+    echo "Usage: resetdb [db_name] [syncdb]"
+ else
+    sudo -u postgres dropdb $1; sudo -u postgres createdb $1; echo "create extension postgis;create extension postgis_topology;" | sudo -u postgres psql -a $1;
+    if [ ! -z "$2" ]; then
+    	python manage.py syncdb
+   fi
+ fi
+}
+
 # compress/extract
 alias compress='tar -zcvf'
 function extract {
