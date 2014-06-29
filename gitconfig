@@ -8,6 +8,9 @@
 	uncommit = reset --soft HEAD^
 	mup = !"git fetch origin -v; git fetch upstream -v; git merge upstream/master"
 	pullall = !"git pull; git submodule update --init --recursive"
+	dw = diff --word-diff
+	lg = log --oneline --decorate
+	st = status -sb
 [core]
 	editor = vim
 	filemode = false
