@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Override 1) run proofread
+MANAGE=`find . -name manage.py | head -1`
+
+# text to print if error occurs
+function ERROR_MSG {
+	echo -e "\e[93m* * *\t\e[31m\"python manage.py proofread\" failed. commit aborted.\e[00m"
+}
+function ECHO_EXIT {
+	ERROR_MSG; cat /tmp/proofread; ERROR_MSG; exit 1
+}
+
+# invoke proofread; only print error message and stderr if error occurs
+python $MANAGE proofread 1>/tmp/proofread 2>&1 || ECHO_EXIT
