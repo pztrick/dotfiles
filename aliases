@@ -24,6 +24,9 @@ alias tc="python manage.py test --verbosity=2"
 # Typical django/git workflow commands
 alias gup="echo -e '\n(1 of 3)\tgit pullall\n' && git pullall && echo -e '\n\n(2 of 3)\tpython manage.py collectstatic --noinput\n' && python manage.py collectstatic --noinput && echo -e '\n\n(3 of 3)\tpython manage.py migrate\n' && python manage.py migrate"
 
+# psgrep
+function psgrep() { ps axuf | grep -v grep | grep "$@" -i --color=auto; }
+
 # resetdb
 function resetdb {
  if [ -z "$1" ]; then
