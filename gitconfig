@@ -17,3 +17,8 @@
 	excludesfile = ~/.files/gitignore
 [color]
 	ui = auto
+[merge]
+	tool = mymeld
+[mergetool "mymeld"]
+   cmd = $HOME/.files/bin/gitmerge $BASE $LOCAL $REMOTE $MERGED
+
