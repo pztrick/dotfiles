@@ -176,3 +176,5 @@ export CDPATH=~/.files/paths
 if [ -f ~/.files/inforc ]; then
 	. ~/.files/inforc
 fi
+
+. ~/.files/ansiblerc
