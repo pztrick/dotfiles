@@ -1,10 +1,9 @@
 # do we have ansible_hosts defined on this machine?
 if [ -f ~/ansible_hosts ];
 then
-	source ~/.files/ansible/hacking/env-setup
+	source ~/.files/ansible/hacking/env-setup 2>&1 >> /dev/null
 	export ANSIBLE_HOSTS=~/ansible_hosts
-	echo -e 'hello \e[1m world \e[0m'
-	echo -e '\e[93m\e[1m * * * \e[0m Ansible loaded.'
+	echo -e '\e[95m\e[1m * * * \e[0mAnsible loaded.'
 else
 	echo -e "\e[31m\e[1m * * * \e[0mAnsible not detected. (~/ansible_hosts)\e[0m"
 fi
