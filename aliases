@@ -1,4 +1,5 @@
 alias dsh='dsh -cM'
+alias ap='ansible-playbook'
 alias pur='dsh -g gridpar ~/pur.sh'
 alias mig='dsh -g gridpar ~/mig.sh'
 alias tig='dsh -m patrick@eptax ~/tig.sh'

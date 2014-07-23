@@ -5,3 +5,8 @@
 *.sublime-workspace
 *.sublime-project
 .env
+
+# private files
+id_rsa
+*.key
+*.crt

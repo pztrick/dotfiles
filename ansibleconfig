@@ -1,2 +1,10 @@
 [defaults]
 host_key_checking = False
+[ssh_connection]
+ssh_args = -o ForwardAgent=yes
+[ec2]
+regions=us-east-1
+route53=True
+all_instances=False
+all_rds_instances=False
+cache_max_age=0
