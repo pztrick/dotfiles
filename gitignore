@@ -1,6 +1,9 @@
 # global gitignore for IDE, etc
 # -- should still exclude project specific ignores in .gitignore
 
+# system junk
+.netrwhist
+
 # IDEs
 *.sublime-workspace
 *.sublime-project
