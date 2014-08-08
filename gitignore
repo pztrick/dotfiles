@@ -13,3 +13,6 @@
 id_rsa
 *.key
 *.crt
+
+# git mergetool
+*.orig
