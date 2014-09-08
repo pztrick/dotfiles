@@ -3,6 +3,9 @@
 
 # system junk
 .netrwhist
+.Trash-1000
+*.pyc
+npm-debug.log
 
 # IDEs
 *.sublime-workspace
