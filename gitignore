@@ -19,3 +19,7 @@ id_rsa
 
 # git mergetool
 *.orig
+*.BACKUP.*
+*.BASE.*
+*.LOCAL.*
+*.REMOTE.*
