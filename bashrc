@@ -178,3 +178,8 @@ if [ -f ~/.files/inforc ]; then
 fi
 
 . ~/.files/ansiblerc
+
+# lastrc
+if [ -n "$PS1" ] && [ -f ~/.lastrc ]; then
+    . ~/.lastrc
+fi
