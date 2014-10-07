@@ -94,3 +94,12 @@ fi
 
 # function pushall
 alias pushall="source ~/.bashrc && dsh -a -- 'cd .files && git pullall'"
+
+# ffmpeg
+function ffcut {
+    if [ -z "$1" ]; then
+        echo "Usage: ffcut [input file] 00:01:24 00:01:37 [output file]"
+    else
+        ffmpeg -i $1 -vcodec copy -ss $2 -to $3 -async 1 -strict -2 $4
+    fi
+}
