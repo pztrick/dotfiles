@@ -9,6 +9,7 @@ alias d2m='git checkout master && git merge develop && git push && git checkout 
 alias ssar='sudo service apache2 restart'
 alias ssn='sudo service nginx restart'
 alias tail='tail -n 30'
+alias grep="grep -C 2 -n --color"
 
 alias clipboard='xclip -sel clip'
 
@@ -100,6 +101,6 @@ function ffcut {
     if [ -z "$1" ]; then
         echo "Usage: ffcut [input file] 00:01:24 00:01:37 [output file]"
     else
-        ffmpeg -i $1 -vcodec copy -ss $2 -to $3 -async 1 -strict -2 $4
+        ffmpeg -i $1 -vcodec copy -acodec copy -ss $2 -to $3 -async 1 -strict -2 $4
     fi
 }
