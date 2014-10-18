@@ -10,6 +10,7 @@ alias ssar='sudo service apache2 restart'
 alias ssn='sudo service nginx restart'
 alias tail='tail -n 30'
 alias grep="grep -C 2 -n --color"
+alias cleanpyc="find . -name "*.pyc" -exec rm -rf {} \;"
 
 alias clipboard='xclip -sel clip'
 
