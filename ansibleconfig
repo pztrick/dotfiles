@@ -7,4 +7,4 @@ regions=us-east-1
 route53=True
 all_instances=False
 all_rds_instances=False
-cache_max_age=0
+cache_max_age=10
