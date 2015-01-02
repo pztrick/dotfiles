@@ -1,4 +1,4 @@
-echo "init.sh ~ configures vimrc and gitconfig and updates submodules\ndoes NOT configure bashrc"
+echo "init.sh ~ configures vimrc and gitconfig and updates submodules\ndoes NOT configure bashrc or aliases"
 bash psp.sh
 bash ppa.sh
 bash vimrc.sh
