@@ -7,3 +7,4 @@ bash ansible.sh
 sudo apt-get install -y git
 git pullall
 sudo bash pip.sh
+bash patrick.sh
