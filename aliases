@@ -106,3 +106,11 @@ function ffcut {
         ffmpeg -i $1 -vcodec copy -acodec copy -ss $2 -to $3 -async 1 -strict -2 $4
     fi
 }
+
+# gloc
+function gitloc {
+  git clone --depth 1 "$1" temp-linecount-repo &&
+  printf "('temp-linecount-repo' will be deleted automatically)\n\n\n" &&
+  cloc temp-linecount-repo &&
+  rm -rf temp-linecount-repo
+}
