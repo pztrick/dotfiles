@@ -114,3 +114,11 @@ function gitloc {
   cloc temp-linecount-repo &&
   rm -rf temp-linecount-repo
 }
+
+# pipx
+function pipx {
+  while read line; do
+    echo $line
+    pip install $line
+  done < "$1"
+}
