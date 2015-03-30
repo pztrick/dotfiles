@@ -133,7 +133,10 @@ fi
 
 # Start ssh-agent and keychain
 # The `whoami` lines give the user and its sudo a separate ssh-agent process
-if [ -f /usr/bin/keychain ]; then
+#if [ -f /usr/bin/ssh-askpass ]; then
+#	export SSH_ASKPASS=/usr/bin/ssh-askpass
+#fi
+if [ -z "$DISPLAY" ] && [ -f /usr/bin/keychain ]; then
 	[ `whoami` == 'root' ] && HOME=/root
 	/usr/bin/keychain --quiet --inherit any $HOME/.ssh/id_rsa
 	source $HOME/.keychain/$HOSTNAME-sh > /dev/null
