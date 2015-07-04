@@ -18,6 +18,7 @@ SSHKEY="$(ssh-add -l 2>&1)"
 if [ "$SSHKEY" == "Could not open a connection to your authentication agent." ] || [ "$SSHKEY" == "The agent has no identities." ];
 then
 	echo -e "\e[31m\e[1m * * * \e[0mNO SSH KEY LOADED \e[31m\e[1m * * * \e[0m"
+	ssh-add
 else
 	echo -e "\e[93m\e[1m * * * \e[0mSSH Key: \e[0m\e[92m$SSHKEY\e[0m"
 fi

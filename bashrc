@@ -188,3 +188,6 @@ fi
 if [ -n "$PS1" ] && [ -f ~/.lastrc ]; then
     . ~/.lastrc
 fi
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

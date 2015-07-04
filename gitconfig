@@ -1,5 +1,5 @@
 [user]
-	email = pztrick44@gmail.com
+	email = patrick@astrohaus.com
 	name = Patrick Paul
 [push]
 	default = current
@@ -11,6 +11,7 @@
 	dw = diff --word-diff
 	lg = log --oneline --decorate
 	st = status -sb
+	fp = format-patch -M -n --stdout -s HEAD^ --start-number
 [core]
 	editor = vim
 	filemode = false
