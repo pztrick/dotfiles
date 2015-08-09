@@ -189,5 +189,10 @@ if [ -n "$PS1" ] && [ -f ~/.lastrc ]; then
     . ~/.lastrc
 fi
 
+# xterm for tmux
+if [ "$TERM" == "xterm" ]; then
+	TERM=xterm-256color
+fi
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"

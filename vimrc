@@ -31,7 +31,7 @@ set colorcolumn=72
 set background=dark " light | dark "
 let g:solarized_termcolors=256
 let g:solarized_termtrans=1 " this will use terminal background color instead
-se t_Co=16
+set t_Co=256
 colorscheme solarized
 
 " shame tab characters visually
