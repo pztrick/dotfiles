@@ -190,7 +190,7 @@ if [ -n "$PS1" ] && [ -f ~/.lastrc ]; then
 fi
 
 # xterm for tmux
-if [ "$TERM" == "xterm" ]; then
+if [ "$TERM" == "xterm-color" ]; then
 	TERM=xterm-256color
 fi
 

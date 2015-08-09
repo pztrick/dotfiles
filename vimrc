@@ -10,6 +10,29 @@ set wildignore=*.pyc,*~
 " enable the mouse for cursor navigation
 set mouse=a
 
+" automatically open nerdtree
+" autocmd vimenter * NERDTree
+
+" open nerdtree if no file is opened on startup
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" close vim if the only pane open is the NERDtree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" Toggle nerd with leader nt
+cmap nt NERDTreeToggle<CR>
+
+" Window switching
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+cmap wh wincmd h<CR>
+cmap wj wincmd j<CR>
+cmap wk wincmd k<CR>
+cmap wl wincmd l<CR>
+
 " automatically toggle (no)paste indents when pasting from clipboard
 let &t_SI .= "\<Esc>[?2004h"
 let &t_EI .= "\<Esc>[?2004l"
@@ -61,6 +84,8 @@ nnoremap k gk
 " alias jj to ESCAPE for command palette
 imap jj <C-c>
 inoremap <ESC> <nop>
+
+" 
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
