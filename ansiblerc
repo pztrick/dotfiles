@@ -4,7 +4,7 @@
 # do we have ansible_hosts defined on this machine?
 if [ -f ~/ansible_hosts ];
 then
-	source ~/.files/ansible/hacking/env-setup 2>&1 >> /dev/null
+	source ~/.files/ansible/hacking/env-setup > /dev/null 2>&1
 	export ANSIBLE_HOSTS=~/ansible_hosts
 	echo -e '\e[95m\e[1m * * * \e[0mAnsible loaded.'
 else

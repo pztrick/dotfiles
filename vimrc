@@ -2,10 +2,43 @@ call pathogen#infect()
 filetype plugin indent on
 syntax on
 
-let mapleader=','
+" set leader to space
+let mapleader=' '
+set autoindent
+set smartindent
+set nostartofline
+syntax enable
+set noswapfile
+set gdefault
+set incsearch
+set ignorecase
+set smartcase
+set encoding=utf-8
+set laststatus=2
+set splitbelow
+set splitright
+set wildmenu
+set wildmode=longest:full,full
+
+" use ag over ack
+if executable('ag')
+  " Use ag over ack
+  let g:ackprg='ag --nogroup --nocolor --column'
+
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
 
 " wildignore
-set wildignore=*.pyc,*~
+set wildignore+=*.pyc,*~
+set wildignore+=*.jpg,*.jpeg,*.gif,*.png,*.gif,*.psd,*.o,*.obj
+set wildignore+=*/node_modules/*,*/.hg/*,*/.git/*
 
 " enable the mouse for cursor navigation
 set mouse=a
@@ -21,7 +54,11 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " Toggle nerd with leader nt
-cmap nt NERDTreeToggle<CR>
+nnoremap <leader>nt :NERDTreeToggle<CR>
+nmap nt :NERDTreeToggle<CR>
+
+" Open Ag search
+nnoremap <leader>a :Ack 
 
 " Window switching
 map <C-h> <C-w>h
