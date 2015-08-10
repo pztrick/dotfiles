@@ -20,6 +20,12 @@ set splitright
 set wildmenu
 set wildmode=longest:full,full
 
+" copy to system clipboard from visual
+vnoremap y "+y
+nnoremap y "+y
+vnoremap p "+p
+nnoremap p "+p
+
 " use ag over ack
 if executable('ag')
   " Use ag over ack

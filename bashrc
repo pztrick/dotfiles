@@ -4,6 +4,9 @@ GIT_EDITOR=vim
 VISUAL=vim
 export PATRICK_BASHRC=.bashrc_patrick
 export MYVIMRC='.files/vimrc'
+DEBEMAIL='patrick@astrohaus.com'
+DEBFULLNAME='Patrick Paul'
+export DEBEMAIL DEBFULLNAME
 
 # Android ADT
 if [ -d /home/patrick/adt/ ]; then
