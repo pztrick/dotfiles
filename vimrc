@@ -24,6 +24,7 @@ set wildmode=longest:full,full
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
+let g:UltiSnipsListSnippets="<tab><tab>"
 let g:UltiSnipsEditSplit="vertical"
 
 " python tabs
