@@ -20,6 +20,43 @@ set splitright
 set wildmenu
 set wildmode=longest:full,full
 
+" UltiSnips snippets
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
+let g:UltiSnipsEditSplit="vertical"
+
+" python tabs
+autocmd FileType python set sw=4
+autocmd FileType python set ts=4
+autocmd FileType python set sts=4
+
+" detect python django filetype
+autocmd FileType python set ft=python.django
+
+" a better htmldjango detection
+augroup filetypedetectHTML
+  " removes current htmldjango detection located at $VIMRUNTIME/filetype.vim
+  au! BufNewFile,BufRead *.html
+  au  BufNewFile,BufRead *.html   call FThtml()
+
+  func! FThtml()
+    let n = 1
+    while n < 10 && n < line("$")
+      if getline(n) =~ '\<DTD\s\+XHTML\s'
+        setf xhtml
+        return
+      endif
+      if getline(n) =~ '{%\|{{\|{#'
+        setf htmldjango.html
+        return
+      endif
+      let n = n + 1
+    endwhile
+    setf html
+  endfunc
+augroup END
+
 " copy to system clipboard from visual
 vnoremap y "+y
 nnoremap y "+y

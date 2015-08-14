@@ -4,3 +4,4 @@ paramiko
 httplib2
 jinja2
 PyYAML
+git+https://github.com/mikemaccana/dnsimple-python.git@0e96175e173d094f612acdfd2bd07c70f0facde9
