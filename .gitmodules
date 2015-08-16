@@ -46,3 +46,6 @@
 [submodule "bundle/YouCompleteMe"]
 	path = bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "extra/fzf"]
+	path = extra/fzf
+	url = https://github.com/junegunn/fzf.git
