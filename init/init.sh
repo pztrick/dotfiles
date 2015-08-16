@@ -6,6 +6,9 @@ bash gitconfig.sh
 bash ansible.sh
 sudo apt-get install -y git
 git pullall
+cd bundle/YouCompleteMe
+./install.sh --clang-completer
+cd ~/.files
 sudo bash pip.sh
 bash patrick.sh
 bash extra.sh

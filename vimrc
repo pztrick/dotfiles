@@ -2,6 +2,8 @@ call pathogen#infect()
 filetype plugin indent on
 syntax on
 
+set hidden
+
 " set leader to space
 let mapleader=' '
 set autoindent
@@ -24,8 +26,17 @@ set wildmode=longest:full,full
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
-let g:UltiSnipsListSnippets="<tab><tab>"
+let g:UltiSnipsListSnippets="<leader><tab>"
 let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsEnableSnipMate=0
+
+" custom home/end
+map <leader>a 0
+map <leader>l $
+map <leader>j 9j 
+map <leader>k 9k
+map <leader>h 19h
+map <leader>l 19l
 
 " python tabs
 autocmd FileType python set sw=4
@@ -102,7 +113,7 @@ nnoremap <leader>nt :NERDTreeToggle<CR>
 nmap nt :NERDTreeToggle<CR>
 
 " Open Ag search
-nnoremap <leader>a :Ack 
+nnoremap <leader>g :Ack 
 
 " Window switching
 map <C-h> <C-w>h

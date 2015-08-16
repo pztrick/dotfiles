@@ -15,7 +15,6 @@ npm-debug.log
 # private files
 id_rsa
 *.key
-*.crt
 
 # git mergetool
 *.orig
