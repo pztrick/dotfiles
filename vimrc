@@ -4,6 +4,9 @@ syntax on
 
 set hidden
 
+" hex editing
+nnoremap <C-h> :Hexmode
+
 " set leader to space
 let mapleader=' '
 set autoindent
@@ -26,7 +29,7 @@ set wildmode=longest:full,full
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
-let g:UltiSnipsListSnippets="<leader><tab>"
+let g:UltiSnipsListSnippets="<C-tab>"
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsEnableSnipMate=0
 
