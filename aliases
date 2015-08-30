@@ -1,4 +1,5 @@
 alias dsh='dsh -cM'
+alias ee='electron .'
 alias pi='ipython'
 alias ap='ansible-playbook'
 alias pur='dsh -g gridpar ~/pur.sh'
