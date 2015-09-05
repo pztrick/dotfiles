@@ -49,3 +49,12 @@
 [submodule "extra/fzf"]
 	path = extra/fzf
 	url = https://github.com/junegunn/fzf.git
+[submodule "bundle/vim-emoji"]
+	path = bundle/vim-emoji
+	url = git://github.com/junegunn/vim-emoji.git
+[submodule "bundle/vim-gitgutter"]
+	path = bundle/vim-gitgutter
+	url = git://github.com/airblade/vim-gitgutter.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = git://github.com/scrooloose/syntastic.git

@@ -4,6 +4,13 @@ syntax on
 
 set hidden
 
+" show line numbers and bind 123<CR> to go to line
+set nu
+nnoremap <CR> G
+
+" <leader>d goes to definition etc
+nnoremap <leader>d :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
 " hex editing
 nnoremap <C-h> :Hexmode
 
@@ -25,6 +32,19 @@ set splitright
 set wildmenu
 set wildmode=longest:full,full
 
+" change gutter color
+highlight clear SignColumn
+highlight GitGutterAdd ctermfg=green guifg=darkgreen
+highlight GitGutterChange ctermfg=yellow guifg=darkyellow
+highlight GitGutterDelete ctermfg=red guifg=darkred
+highlight GitGutterChangeDelete ctermfg=yellow guifg=darkyellow
+let g:gitgutter_map_keys=0
+" let g:gitgutter_sign_added = '+'
+" let g:gitgutter_sign_modified = 'o'
+" let g:gitgutter_sign_removed = '-'
+" let g:gitgutter_sign_removed_first_line = '^^'
+" let g:gitgutter_sign_modified_removed = 'ww'
+
 " UltiSnips snippets
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
@@ -32,6 +52,33 @@ let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
 let g:UltiSnipsListSnippets="<C-tab>"
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsEnableSnipMate=0
+
+" YCM + UltiSnips compatibility
+let g:ycm_key_list_select_completion = ['<C-j>']
+let g:ycm_key_list_previous_completion = ['<C-k>']
+
+" clang completer
+let g:ycm_global_ycm_extra_conf = "~/.files/extra/global_extra_youcompleteme_conf.py"
+
+" syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_html_tidy_exec = 'tidy5'
+let g:syntastic_error_symbol = '✘✘'
+let g:syntastic_warning_symbol = '⚡⚡'
+
+" gitgutter emoji
+silent! if emoji#available()
+  let g:gitgutter_sign_added = emoji#for('small_blue_diamond')
+  let g:gitgutter_sign_modified = emoji#for('small_orange_diamond')
+  let g:gitgutter_sign_removed = emoji#for('small_red_triangle')
+  let g:gitgutter_sign_modified_removed = emoji#for('collision')
+endif
 
 " custom home/end
 map <leader>a 0
