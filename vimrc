@@ -54,8 +54,17 @@ let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsEnableSnipMate=0
 
 " YCM + UltiSnips compatibility
-let g:ycm_key_list_select_completion = ['<C-j>']
-let g:ycm_key_list_previous_completion = ['<C-k>']
+let g:UltiSnipsExpandTrigger = "<nop>"
+let g:ulti_expand_or_jump_res = 0
+function ExpandSnippetOrCarriageReturn()
+    let snippet = UltiSnips#ExpandSnippetOrJump()
+    if g:ulti_expand_or_jump_res > 0
+        return snippet
+    else
+        return "\<CR>"
+    endif
+endfunction
+inoremap <expr> <CR> pumvisible() ? "<C-R>=ExpandSnippetOrCarriageReturn()<CR>" : "\<CR>"
 
 " clang completer
 let g:ycm_global_ycm_extra_conf = "~/.files/extra/global_extra_youcompleteme_conf.py"
