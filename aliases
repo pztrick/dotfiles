@@ -60,7 +60,7 @@ function startbitbucket {
     echo 'Username?'
     read username
     echo 'Password?'
-    read password
+    read -s password
     echo 'Repo name?'
     read reponame
 
