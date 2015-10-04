@@ -14,6 +14,9 @@ nnoremap <leader>d :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " hex editing
 nnoremap <C-h> :Hexmode
 
+" ignore these regex in nerdtree list
+let NERDTreeIgnore = ['\.pyc$']
+
 " set leader to space
 let mapleader=' '
 set autoindent
