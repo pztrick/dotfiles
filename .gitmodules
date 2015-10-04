@@ -64,3 +64,6 @@
 [submodule "bundle/vim-dispatch"]
 	path = bundle/vim-dispatch
 	url = git://github.com/tpope/vim-dispatch.git
+[submodule "bundle/hexmode"]
+	path = bundle/hexmode
+	url = https://github.com/fidian/hexmode.git
