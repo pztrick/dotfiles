@@ -8,6 +8,7 @@ DEBEMAIL='patrick@astrohaus.com'
 DEBFULLNAME='Patrick Paul'
 export DEBEMAIL DEBFULLNAME
 export GOPATH=/opt/go
+export PATH=$PATH:/usr/local/go/bin
 
 # Android ADT
 if [ -d /home/patrick/adt/ ]; then
