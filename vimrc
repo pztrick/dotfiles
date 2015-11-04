@@ -4,6 +4,12 @@ syntax on
 
 set hidden
 
+" vim-json
+autocmd BufNewFile,BufRead *.json setlocal filetype=json
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
 " show line numbers and bind 123<CR> to go to line
 set nu
 nnoremap <CR> G

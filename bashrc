@@ -7,6 +7,7 @@ export MYVIMRC='.files/vimrc'
 DEBEMAIL='patrick@astrohaus.com'
 DEBFULLNAME='Patrick Paul'
 export DEBEMAIL DEBFULLNAME
+export GOPATH=/opt/go
 
 # Android ADT
 if [ -d /home/patrick/adt/ ]; then
