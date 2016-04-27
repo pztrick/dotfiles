@@ -12,6 +12,9 @@ npm-debug.log
 *.sublime-project
 .env
 
+# preprocessors
+.sass-cache
+
 # private files
 id_rsa
 *.key
@@ -22,3 +25,7 @@ id_rsa
 *.BASE.*
 *.LOCAL.*
 *.REMOTE.*
+
+# c/c++
+.cproject
+*.o

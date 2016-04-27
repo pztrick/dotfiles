@@ -8,7 +8,7 @@ DEBEMAIL='patrick@astrohaus.com'
 DEBFULLNAME='Patrick Paul'
 export DEBEMAIL DEBFULLNAME
 export GOPATH=/opt/go
-export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/usr/local/go/bin:/opt/go/bin
 
 # Android ADT
 if [ -d /home/patrick/adt/ ]; then
@@ -147,6 +147,7 @@ if [ -z "$DISPLAY" ] && [ -f /usr/bin/keychain ]; then
 	source $HOME/.keychain/$HOSTNAME-sh > /dev/null
 	[ `whoami` == 'root' ] && HOME=~
 fi
+eval `keychain --eval id_rsa`
 # End ssh-agent and keychain
 
 # virtualenvwrapper
