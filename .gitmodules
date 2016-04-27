@@ -19,9 +19,6 @@
 [submodule "bundle/command-t"]
 	path = bundle/command-t
 	url = git://github.com/wincent/Command-T.git
-[submodule "ansible"]
-	path = ansible
-	url = git@github.com:ansible/ansible.git
 [submodule "bundle/vim-ansible-yaml"]
 	path = bundle/vim-ansible-yaml
 	url = git@github.com:chase/vim-ansible-yaml.git
