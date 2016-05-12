@@ -1,5 +1,5 @@
 sudo rm -r ~/.vim 2> /dev/null
 sudo rm -r ~/.vimrc 2> /dev/null
-ln -s ~/.files ~/.vim
-ln -s ~/.files/vimrc ~/.vimrc
-ln -s ~/.files/tmux.conf ~/.tmux.conf
+ln -sf ~/.files ~/.vim
+ln -sf ~/.files/vimrc ~/.vimrc
+ln -sf ~/.files/tmux.conf ~/.tmux.conf
