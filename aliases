@@ -6,7 +6,7 @@ alias pur='dsh -g gridpar ~/pur.sh'
 alias mig='dsh -g gridpar ~/mig.sh'
 alias tig='dsh -m patrick@eptax ~/tig.sh'
 alias igg='dsh -m patrick@zeltennia ~/igg.sh'
-alias d2m='git checkout master && git merge develop && git push && git checkout develop && git merge master'
+alias d2m='git checkout master && git merge develop && git push && git checkout develop && git merge master && git pull'
 alias ssar='sudo service apache2 restart'
 alias ssn='sudo service nginx restart'
 alias tail='tail -n 30'
@@ -41,6 +41,11 @@ alias gup="echo -e '\n(1 of 3)\tgit pullall\n' && git pullall && echo -e '\n\n(2
 
 # psgrep
 function psgrep() { ps axuf | grep -v grep | grep "$@" -i --color=auto; }
+
+# docker bash
+function dbash() {
+    docker exec -i -t $1 /bin/bash
+}
 
 # resetdb
 function resetdb {
