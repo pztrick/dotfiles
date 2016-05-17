@@ -202,3 +202,9 @@ fi
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# Ansible EC2 path
+# https://aws.amazon.com/blogs/apn/getting-started-with-ansible-and-dynamic-amazon-ec2-inventory-management/
+export ANSIBLE_HOSTS=~/.files/extra/ansible_ec2.py
+export EC2_INI_PATH=~/.files/extra/ansible_ec2.ini
+
