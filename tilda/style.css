@@ -1,0 +1,35 @@
+/* ~/.config/tilda/style.css */
+
+
+GtkWindow#Main {
+}
+
+/* Notebook */
+GtkWindow#Main .notebook {
+    padding: 0px;
+    background-color: #073642;
+}
+
+/* Tab label and text */
+GtkWindow#Main .notebook tab GtkLabel {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/* Inactive tab background */
+GtkWindow#Main .notebook tab {
+    background-color: #073642;
+}
+GtkWindow#Main .notebook tab GtkLabel {
+    color: #93a1a1;
+}
+
+/* Active tab background */
+GtkWindow#Main .notebook tab:active {
+    background-color: #002b36;
+}
+GtkWindow#Main .notebook tab:active GtkLabel {
+    color: #eee8d5;
+}

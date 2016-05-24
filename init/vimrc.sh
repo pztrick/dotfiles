@@ -4,4 +4,5 @@ ln -sf ~/.files ~/.vim
 ln -sf ~/.files/vimrc ~/.vimrc
 ln -sf ~/.files/tmux.conf ~/.tmux.conf
 sudo update-alternatives --set vim /usr/bin/vim.gnome-py2
-
+rm -rf ~/.config/tilda
+ln -sf ~/.files/tilda ~/.config/tilda
