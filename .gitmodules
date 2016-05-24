@@ -3,25 +3,25 @@
 	url = http://github.com/tpope/vim-fugitive.git
 [submodule "bundle/sensible"]
 	path = bundle/sensible
-	url = git://github.com/tpope/vim-sensible.git
+	url = https://github.com/tpope/vim-sensible.git
 [submodule "bundle/colors-solarized"]
 	path = bundle/colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule "bundle/togglemouse"]
 	path = bundle/togglemouse
-	url = git://github.com/nvie/vim-togglemouse.git
+	url = https://github.com/nvie/vim-togglemouse.git
 [submodule "bundle/multiple-cursors"]
 	path = bundle/multiple-cursors
-	url = git://github.com/terryma/vim-multiple-cursors.git
+	url = https://github.com/terryma/vim-multiple-cursors.git
 [submodule "bundle/airline"]
 	path = bundle/airline
-	url = git://github.com/bling/vim-airline
+	url = https://github.com/bling/vim-airline
 [submodule "bundle/command-t"]
 	path = bundle/command-t
-	url = git://github.com/wincent/Command-T.git
+	url = https://github.com/wincent/Command-T.git
 [submodule "bundle/vim-ansible-yaml"]
 	path = bundle/vim-ansible-yaml
-	url = git@github.com:chase/vim-ansible-yaml.git
+	url = https://github.com/chase/vim-ansible-yaml.git
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
@@ -48,19 +48,19 @@
 	url = https://github.com/junegunn/fzf.git
 [submodule "bundle/vim-emoji"]
 	path = bundle/vim-emoji
-	url = git://github.com/junegunn/vim-emoji.git
+	url = https://github.com/junegunn/vim-emoji.git
 [submodule "bundle/vim-gitgutter"]
 	path = bundle/vim-gitgutter
-	url = git://github.com/airblade/vim-gitgutter.git
+	url = https://github.com/airblade/vim-gitgutter.git
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
-	url = git://github.com/scrooloose/syntastic.git
+	url = https://github.com/scrooloose/syntastic.git
 [submodule "bundle/vim-tags"]
 	path = bundle/vim-tags
-	url = git://github.com/szw/vim-tags.git
+	url = https://github.com/szw/vim-tags.git
 [submodule "bundle/vim-dispatch"]
 	path = bundle/vim-dispatch
-	url = git://github.com/tpope/vim-dispatch.git
+	url = https://github.com/tpope/vim-dispatch.git
 [submodule "bundle/hexmode"]
 	path = bundle/hexmode
 	url = https://github.com/fidian/hexmode.git
