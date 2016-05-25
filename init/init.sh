@@ -20,3 +20,6 @@ rm -rf .bashrc
 ln -sf .files/bashrc .bashrc
 rm -rf .bash_aliases
 ln -sf .files/aliases .bash_aliases
+
+sudo addgroup docker
+sudo usermod -a -G docker patrick
