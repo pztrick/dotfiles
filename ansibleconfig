@@ -8,3 +8,4 @@ route53=True
 all_instances=False
 all_rds_instances=False
 cache_max_age=10
+elasticache=False

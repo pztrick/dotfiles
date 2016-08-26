@@ -1,4 +1,3 @@
-ln -s ~/.files/ansibleconfig ~/.ansible.cfg
-ln -s ~/.files/ansible/plugins/inventory/ec2.py ~/ansible_hosts
-ln -s ~/.files/ansibleconfig /etc/ansible/ec2.ini
-cd ~/.files/ansible; sudo python setup.py install
+ln -sf ~/.files/ansibleconfig ~/.ansible.cfg
+ln -sf ~/.files/init/ansible-ec2.py ~/ansible_hosts
+sudo ln -sf ~/.files/ansibleconfig /etc/ansible/ec2.ini

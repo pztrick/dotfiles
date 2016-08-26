@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo modprobe dummy
+sudo ip link set name eth0 dev dummy0
