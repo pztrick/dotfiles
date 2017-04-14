@@ -208,4 +208,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export ANSIBLE_HOSTS=~/.files/extra/ansible_ec2.py
 export EC2_INI_PATH=~/.files/extra/ansible_ec2.ini
 
+source /home/patrick/.dvm/dvm.sh || curl -sL https://download.getcarina.com/dvm/latest/install.sh | sh
+
 cd ~
