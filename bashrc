@@ -141,13 +141,15 @@ fi
 #if [ -f /usr/bin/ssh-askpass ]; then
 #	export SSH_ASKPASS=/usr/bin/ssh-askpass
 #fi
-if [ -z "$DISPLAY" ] && [ -f /usr/bin/keychain ]; then
-	[ `whoami` == 'root' ] && HOME=/root
-	/usr/bin/keychain --quiet --inherit any $HOME/.ssh/id_rsa
-	source $HOME/.keychain/$HOSTNAME-sh > /dev/null
-	[ `whoami` == 'root' ] && HOME=~
+if [ "$(hostname)" = "puck" ]; then
+    if [ -z "$DISPLAY" ] && [ -f /usr/bin/keychain ]; then
+    	[ `whoami` == 'root' ] && HOME=/root
+    	/usr/bin/keychain --quiet --inherit any $HOME/.ssh/id_rsa
+    	source $HOME/.keychain/$HOSTNAME-sh > /dev/null
+    	[ `whoami` == 'root' ] && HOME=~
+    fi
+    eval `keychain --eval id_rsa`
 fi
-eval `keychain --eval id_rsa`
 # End ssh-agent and keychain
 
 # virtualenvwrapper
