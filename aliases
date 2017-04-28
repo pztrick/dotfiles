@@ -47,6 +47,12 @@ function dbash() {
     docker exec -i -t $1 /bin/bash
 }
 
+# proxy internet away
+function sshnet() {
+    echo -e "proxying 1080 to remote $1"
+    ssh -A -D 1080 localhost -t ssh -A -R 1080:localhost:1080 $1
+}
+
 # resetdb
 function resetdb {
  if [ -z "$1" ]; then
