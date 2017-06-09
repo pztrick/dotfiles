@@ -212,4 +212,7 @@ export EC2_INI_PATH=~/.files/extra/ansible_ec2.ini
 
 # source /home/patrick/.dvm/dvm.sh || curl -sL https://download.getcarina.com/dvm/latest/install.sh | sh
 
+export PATH_ORIGINAL=$PATH
+
 cd ~
+
