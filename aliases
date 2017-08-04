@@ -47,6 +47,14 @@ function dbash() {
     docker exec -i -t $1 /bin/bash
 }
 
+# nginx enable site / disable site
+function ngenable() {
+    sudo ln -sf /etc/nginx/sites-available/$1 /etc/nginx/sites-enabled/$1
+}
+function ngdisable() {
+    sudo rm -fv /etc/nginx/sites-enabled/$1
+}
+
 # proxy internet away
 function sshnet() {
     echo -e "proxying 1080 to remote $1"
