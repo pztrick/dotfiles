@@ -12,9 +12,9 @@ export PATH=$PATH:/usr/local/go/bin:/opt/go/bin
 
 # Android ADT
 if [ -d /home/patrick/adt/ ]; then
-	PATH=$PATH:/home/patrick/adt/sdk/tools
-	PATH=$PATH:/home/patrick/adt/sdk/platform-tools
-	PATH=$PATH:/home/patrick/adt/bin
+    PATH=$PATH:/home/patrick/adt/sdk/tools
+    PATH=$PATH:/home/patrick/adt/sdk/platform-tools
+    PATH=$PATH:/home/patrick/adt/bin
 fi
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
@@ -23,7 +23,7 @@ fi
 
 # get git branch up top so PS1 can use
 function parse_git_branch {
-        git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
 # If not running interactively, don't do anything
@@ -68,12 +68,12 @@ force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
+        # We have color support; assume it's compliant with Ecma-48
+        # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+        # a case would tend to support setf rather than setaf.)
+        color_prompt=yes
     else
-	color_prompt=
+        color_prompt=
     fi
 fi
 
@@ -82,7 +82,7 @@ if [ -n "$PS1" ]; then
 
     # add colors to ps1 prompt
     if [ "$color_prompt" = yes ]; then
-    #    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+        #    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
         PS1="${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$(parse_git_branch)\$ "
     else
         PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
@@ -91,11 +91,11 @@ if [ -n "$PS1" ]; then
 
     # If this is an xterm set the title to user@host:dir
     case "$TERM" in
-    xterm*|rxvt*)
-        PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-        ;;
-    *)
-        ;;
+        xterm*|rxvt*)
+            PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+            ;;
+        *)
+            ;;
     esac
 fi
 
@@ -143,10 +143,10 @@ fi
 #fi
 if [ "$(hostname)" = "puck" ]; then
     if [ -z "$DISPLAY" ] && [ -f /usr/bin/keychain ]; then
-    	[ `whoami` == 'root' ] && HOME=/root
-    	/usr/bin/keychain --quiet --inherit any $HOME/.ssh/id_rsa
-    	source $HOME/.keychain/$HOSTNAME-sh > /dev/null
-    	[ `whoami` == 'root' ] && HOME=~
+        [ `whoami` == 'root' ] && HOME=/root
+        /usr/bin/keychain --quiet --inherit any $HOME/.ssh/id_rsa
+        source $HOME/.keychain/$HOSTNAME-sh > /dev/null
+        [ `whoami` == 'root' ] && HOME=~
     fi
     eval `keychain --eval id_rsa`
 fi
@@ -174,12 +174,12 @@ source /usr/local/bin/activate.sh
 
 # localrc
 if [ -n "$PS1" ] && [ -f ~/.localrc ]; then
-	. ~/.localrc
+    . ~/.localrc
 fi
 
 # functions
 if [ -f ~/.files/functions ]; then
-	. ~/.files/functions
+    . ~/.files/functions
 fi
 
 # paths
@@ -187,7 +187,7 @@ export CDPATH=~/.files/paths
 
 # inforc print at the end
 if [ -f ~/.files/inforc ]; then
-	. ~/.files/inforc
+    . ~/.files/inforc
 fi
 
 . ~/.files/ansiblerc
@@ -199,7 +199,7 @@ fi
 
 # xterm for tmux
 if [ "$TERM" == "xterm-color" ]; then
-	TERM=xterm-256color
+    TERM=xterm-256color
 fi
 
 ### Added by the Heroku Toolbelt
