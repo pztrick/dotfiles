@@ -9,6 +9,7 @@
 	mup = !"git fetch origin -v; git fetch upstream -v; git merge upstream/master"
 	pullall = !"git pull; git submodule update --init --recursive"
 	dw = diff --word-diff
+	dc = diff --cached
 	lg = log --oneline --decorate
 	st = status -sb
 	fp = format-patch -M -n --stdout -s HEAD^ --start-number
