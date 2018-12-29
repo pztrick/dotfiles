@@ -22,8 +22,6 @@ alias tl='tmux list-sessions'
 # alias tmux=_zsh_tmux_plugin_run
 alias ts='tmux new-session -s'
 
-alias clipboard='xclip -sel clip'
-
 # ls updates
 alias ls='ls --color=auto --hide="*.pyc"'
 

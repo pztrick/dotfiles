@@ -170,7 +170,7 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 # note that this overrides cd, and autoenv also does below, killing RVM cd... so you must use .env instead of .rvmrc
 
 # autoenv
-source /usr/local/bin/activate.sh
+# source /usr/local/bin/activate.sh
 
 # localrc
 if [ -n "$PS1" ] && [ -f ~/.localrc ]; then
@@ -189,8 +189,6 @@ export CDPATH=~/.files/paths
 if [ -f ~/.files/inforc ]; then
     . ~/.files/inforc
 fi
-
-. ~/.files/ansiblerc
 
 # lastrc
 if [ -n "$PS1" ] && [ -f ~/.lastrc ]; then
