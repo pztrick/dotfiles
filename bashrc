@@ -214,3 +214,31 @@ export PATH_ORIGINAL=$PATH
 
 cd ~
 
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+PARENTP=$(ps -o comm= -p $(ps -o ppid= -p $$))
+LOCKDIR=/tmp/tilda.lock
+function setuptilda() {
+    sudo mkdir ${LOCKDIR}.1 && return
+    sudo mkdir ${LOCKDIR}.2 || return
+    xdotool key ctrl+T
+    xdotool key ctrl+T
+    xdotool key ctrl+T
+    xdotool key ctrl+T
+    xdotool key ctrl+T
+    xdotool key ctrl+shift+F
+    subl
+}
+if [ "$PARENTP" = "tilda" ]; then
+    setuptilda
+else
+    echo "Skipping TILDA setup"
+fi
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
+
+export VIRTUALENV_PYTHON=$(which python3.6)  # default to py3 for new venvs
+
+# eval "$(direnv hook bash)"
+

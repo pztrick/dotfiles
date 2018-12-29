@@ -13,6 +13,9 @@
 	lg = log --oneline --decorate
 	st = status -sb
 	fp = format-patch -M -n --stdout -s HEAD^ --start-number
+    c = commit
+    r = reset
+    ck = checkout
 [core]
 	editor = vim
 	filemode = false
