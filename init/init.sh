@@ -1,13 +1,12 @@
 #!/bin/bash
-set -e
-
-echo "init.sh ~ configures vimrc and gitconfig and updates submodules\ndoes NOT configure gui.sh"
-bash psp.sh
-bash ppa.sh
-bash vimrc.sh
-bash gitconfig.sh
-bash ansible.sh
-sudo apt-get install -y git
+# set -e
+# 
+# echo "init.sh ~ configures vimrc and gitconfig and updates submodules\ndoes NOT configure gui.sh"
+# bash psp.sh
+# bash ppa.sh
+# bash vimrc.sh
+# bash gitconfig.sh
+# sudo apt-get install -y git
 git pullall
 cd ~/.files/bundle/YouCompleteMe
 ./install.sh --clang-completer
