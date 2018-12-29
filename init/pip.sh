@@ -1,1 +1,1 @@
-sudo pip install -r sudo_pip_requirements.txt
+sudo -H pip install -r sudo_pip_requirements.txt
