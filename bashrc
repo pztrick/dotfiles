@@ -220,8 +220,7 @@ eval "$(rbenv init -)"
 PARENTP=$(ps -o comm= -p $(ps -o ppid= -p $$))
 LOCKDIR=/tmp/tilda.lock
 function setuptilda() {
-    sudo mkdir ${LOCKDIR}.1 && return
-    sudo mkdir ${LOCKDIR}.2 || return
+    sudo mkdir ${LOCKDIR}.1 || return
     xdotool key ctrl+T
     xdotool key ctrl+T
     xdotool key ctrl+T
