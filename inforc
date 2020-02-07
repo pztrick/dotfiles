@@ -23,3 +23,4 @@ else
 	echo -e "\e[93m\e[1m * * * \e[0mSSH Key: \e[0m\e[92m$SSHKEY\e[0m"
 fi
 
+echo -e "\n"
