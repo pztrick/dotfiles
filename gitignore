@@ -1,6 +1,25 @@
 # global gitignore for IDE, etc
 # -- should still exclude project specific ignores in .gitignore
 
+# CMake
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
+
+./sls  # just a symlink i do not care about
+
+*.gitignore
+
+*.code-workspace
+
 # system junk
 .netrwhist
 .Trash-1000
@@ -11,6 +30,7 @@ npm-debug.log
 *.sublime-workspace
 *.sublime-project
 .env
+.envrc
 
 # preprocessors
 .sass-cache
