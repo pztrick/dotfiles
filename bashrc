@@ -8,7 +8,7 @@ DEBEMAIL='patrick@astrohaus.com'
 DEBFULLNAME='Patrick Paul'
 export DEBEMAIL DEBFULLNAME
 export GOPATH=/opt/go
-export PATH=$PATH:/usr/local/go/bin:/opt/go/bin
+export PATH=$PATH:/usr/local/go/bin:/opt/go/bin:/snap/bin
 
 # Android ADT
 if [ -d /home/patrick/adt/ ]; then
@@ -170,7 +170,7 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 # note that this overrides cd, and autoenv also does below, killing RVM cd... so you must use .env instead of .rvmrc
 
 # autoenv
-# source /usr/local/bin/activate.sh
+source /usr/local/bin/activate.sh
 
 # localrc
 if [ -n "$PS1" ] && [ -f ~/.localrc ]; then
@@ -217,27 +217,11 @@ cd ~
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-PARENTP=$(ps -o comm= -p $(ps -o ppid= -p $$))
-LOCKDIR=/tmp/tilda.lock
-function setuptilda() {
-    sudo mkdir ${LOCKDIR}.1 || return
-    xdotool key ctrl+T
-    xdotool key ctrl+T
-    xdotool key ctrl+T
-    xdotool key ctrl+T
-    xdotool key ctrl+T
-    xdotool key ctrl+shift+F
-    subl
-}
-if [ "$PARENTP" = "tilda" ]; then
-    setuptilda
-else
-    echo "Skipping TILDA setup"
-fi
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 
 export VIRTUALENV_PYTHON=$(which python3.6)  # default to py3 for new venvs
 
-# eval "$(direnv hook bash)"
+eval "$(direnv hook bash)"
+export PATH="/home/patrick/.ebcli-virtual-env/executables:$PATH"
 
