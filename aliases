@@ -13,6 +13,7 @@ alias tail='tail -n 30'
 alias cgrep="grep -C 2 -n --color"
 alias cleanpyc="rm *.pyc; find . -name "*.pyc" -exec rm -rf {} \;"
 alias cleanorig="rm *.orig; find . -name "*.orig" -exec rm -rf {} \;"
+alias dcup="docker-compose up"
 
 # tmux
 alias ta='tmux attach -t'
