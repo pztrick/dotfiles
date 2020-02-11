@@ -1,5 +1,6 @@
 alias dsh='dsh -cM'
 alias ee='electron .'
+alias ifc='ip r show|grep " src "|cut -d " " -f 3,12'
 alias pi='ipython'
 alias ap='ansible-playbook'
 alias pur='dsh -g gridpar ~/pur.sh'
