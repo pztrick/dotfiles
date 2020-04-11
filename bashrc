@@ -225,3 +225,5 @@ export VIRTUALENV_PYTHON=$(which python3.6)  # default to py3 for new venvs
 eval "$(direnv hook bash)"
 export PATH="/home/patrick/.ebcli-virtual-env/executables:$PATH"
 
+export NODE_VERSIONS=/usr/local/n/versions/node
+export NODE_VERSION_PREFIX=""  # no prefix
