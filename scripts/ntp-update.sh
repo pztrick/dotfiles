@@ -1,3 +1,4 @@
 #!/bin/bash
 
-ntpdate -s time.nist.gov
+sudo ntpdate -b -s time.nist.gov
+
