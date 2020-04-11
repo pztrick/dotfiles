@@ -220,7 +220,7 @@ eval "$(rbenv init -)"
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 
-export VIRTUALENV_PYTHON=$(which python3.6)  # default to py3 for new venvs
+export VIRTUALENV_PYTHON=$(which python3.7)  # default to py3 for new venvs
 
 eval "$(direnv hook bash)"
 export PATH="/home/patrick/.ebcli-virtual-env/executables:$PATH"
