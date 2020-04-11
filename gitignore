@@ -16,6 +16,8 @@ _deps
 
 ./sls  # just a symlink i do not care about
 
+.direnv
+
 *.gitignore
 
 *.code-workspace

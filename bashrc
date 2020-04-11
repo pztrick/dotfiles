@@ -21,6 +21,16 @@ fi
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+# get venv name up top so PS1 can use
+function parse_venv {
+    if [ "${VIRTUAL_ENV}" ]; then
+        VDIR=${VIRTUAL_ENV%/*}
+        VDIR_BASE=${VDIR##*/}
+        VENV_BASE=${VIRTUAL_ENV##*/}
+        echo "(${VDIR_BASE}/${VENV_BASE}) "
+    fi
+}
+
 # get git branch up top so PS1 can use
 function parse_git_branch {
     git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
@@ -83,7 +93,7 @@ if [ -n "$PS1" ]; then
     # add colors to ps1 prompt
     if [ "$color_prompt" = yes ]; then
         #    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-        PS1="${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$(parse_git_branch)\$ "
+        PS1="\$(parse_venv)${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$(parse_git_branch)\$ "
     else
         PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
     fi
