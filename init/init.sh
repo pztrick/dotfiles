@@ -2,13 +2,12 @@
 set -e
 
 echo "init.sh ~ configures vimrc and gitconfig and updates submodules\ndoes NOT configure gui.sh"
-bash apt.sh
-bash vimrc.sh
-bash gitconfig.sh
+bash ~/.files/init/apt.sh
+bash ~/.files/init/vimrc.sh
+bash ~/.files/init/gitconfig.sh
 git pullall
 cd ~/.files/bundle/YouCompleteMe
 ./install.sh --clang-completer
-cd ~/.files/init
 cd ~
 rm -rf .bashrc
 ln -sf .files/bashrc .bashrc
