@@ -224,8 +224,8 @@ export PATH_ORIGINAL=$PATH
 
 cd ~
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+# export PATH="$HOME/.rbenv/bin:$PATH"
+# eval "$(rbenv init -)"
 
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
