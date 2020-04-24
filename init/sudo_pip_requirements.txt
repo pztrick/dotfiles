@@ -1,6 +1,0 @@
-virtualenvwrapper
-paramiko
-httplib2
-jinja2
-PyYAML
-pyopenssl
