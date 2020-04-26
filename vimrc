@@ -180,6 +180,10 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 nnoremap <leader>nt :NERDTreeToggle<CR>
 nmap nt :NERDTreeToggle<CR>
 
+" remap yy to Y yank
+nnoremap yy Y
+nnoremap pp P
+
 " Open Ag search
 nnoremap <leader>g :Ack 
 
