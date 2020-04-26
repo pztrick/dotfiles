@@ -43,3 +43,9 @@ vim-multiple-cursors
 * `<C-x>` ignores current selection and advances to next
 * `<C-p>` returns to previous selection
 
+### Useful git commands
+
+```
+DIR=lib/xyz/Documentation; git filter-repo --path $DIR --invert-paths
+git filter-repo --path-glob '*.chm' --invert-paths
+```
