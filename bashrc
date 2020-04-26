@@ -8,7 +8,7 @@ DEBEMAIL='patrick@astrohaus.com'
 DEBFULLNAME='Patrick Paul'
 export DEBEMAIL DEBFULLNAME
 export GOPATH=/opt/go
-export PATH=$PATH:/usr/local/go/bin:/opt/go/bin:/snap/bin
+export PATH=$PATH:/usr/local/go/bin:/opt/go/bin:/snap/bin:/home/$USER/.files/scripts
 
 # Android ADT
 if [ -d /home/patrick/adt/ ]; then
@@ -162,12 +162,6 @@ if [ "$(hostname)" = "puck" ]; then
 fi
 # End ssh-agent and keychain
 
-# virtualenvwrapper
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Devel
-source /usr/local/bin/virtualenvwrapper.sh
-# #
-
 # disable CTRL+S freeze
 if [ -n "$PS1" ]; then
     stty ixany
@@ -180,7 +174,7 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 # note that this overrides cd, and autoenv also does below, killing RVM cd... so you must use .env instead of .rvmrc
 
 # autoenv
-source /usr/local/bin/activate.sh
+# source /usr/local/bin/activate.sh
 
 # localrc
 if [ -n "$PS1" ] && [ -f ~/.localrc ]; then
@@ -235,5 +229,5 @@ export VIRTUALENV_PYTHON=$(which python3.7)  # default to py3 for new venvs
 eval "$(direnv hook bash)"
 export PATH="/home/patrick/.ebcli-virtual-env/executables:$PATH"
 
-export NODE_VERSIONS=/usr/local/n/versions/node
-export NODE_VERSION_PREFIX=""  # no prefix
+export NODE_VERSIONS=/usr/local/n/versions/node  # 
+export NODE_VERSION_PREFIX=""  # no prefix; see: https://github.com/direnv/direnv/wiki/Node
