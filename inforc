@@ -20,7 +20,7 @@ then
 	echo -e "\e[31m\e[1m * * * \e[0mNO SSH KEY LOADED \e[31m\e[1m * * * \e[0m"
 	ssh-add
 else
-	echo -e "\e[93m\e[1m * * * \e[0mSSH Key: \e[0m\e[92m$SSHKEY\e[0m"
+	# echo -e "\e[93m\e[1m * * * \e[0mSSH Keys:\n\e[0m\e[92m$SSHKEY\e[0m"
+	echo -e "\e[93m\e[1m * * * \e[0mSSH Keys: \e[0m\e[92mssh-add -l\e[0m\n"
 fi
 
-echo -e "\n"
