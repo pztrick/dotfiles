@@ -14,13 +14,15 @@ echo -e "\e[34m\e[1m * * * \e[0m[pztrick/dotfiles.git] \e[4m$LC_DATE\e[0m \e[1m\
 cd $NOW_PATH
 
 # echo SSH key
-SSHKEY="$(ssh-add -l 2>&1)"
+SSHKEY="$(ssh-add -l 2>&1 | sed ':a;N;$!ba;s/\n/\n\t/g')"
 if [ "$SSHKEY" == "Could not open a connection to your authentication agent." ] || [ "$SSHKEY" == "The agent has no identities." ];
 then
 	echo -e "\e[31m\e[1m * * * \e[0mNO SSH KEY LOADED \e[31m\e[1m * * * \e[0m"
 	ssh-add
 else
-	# echo -e "\e[93m\e[1m * * * \e[0mSSH Keys:\n\e[0m\e[92m$SSHKEY\e[0m"
-	echo -e "\e[93m\e[1m * * * \e[0mSSH Keys: \e[0m\e[92mssh-add -l\e[0m\n"
+	echo -e "\e[93m\e[1m * * * SSH Keys * * *\e[0m"
+    echo -e "\e[92m\t$SSHKEY\e[0m"
+	# echo -e "\e[93m\e[1m * * * \e[0mSSH Keys: \e[0m\e[92mssh-add -l\e[0m\n"
+    echo -e "\e[93m\e[1m * * * End SSH Keys * * *\n"
 fi
 
