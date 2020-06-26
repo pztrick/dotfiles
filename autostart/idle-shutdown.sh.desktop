@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=/home/patrick/.files/scripts/idle-shutdown.sh
+Hidden=false
+X-MATE-Autostart-enabled=true
+Name[en_US]=idle-shutdown
+Name=idle-shutdown
+Comment[en_US]=
+Comment=
