@@ -3,6 +3,7 @@ set -e
 
 echo "init.sh ~ configures vimrc and gitconfig and updates submodules\ndoes NOT configure gui.sh"
 bash ~/.files/init/apt.sh
+bash ~/.files/init/bfg.sh
 bash ~/.files/init/vimrc.sh
 bash ~/.files/init/gitconfig.sh
 git pullall
