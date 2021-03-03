@@ -1,0 +1,16 @@
+
+[directory]
+truncate_to_repo = false
+
+[package]
+disabled = true
+
+[aws]
+format = '[$symbol$profile(\($region\))]($style) '
+style = "bold blue"
+[aws.region_aliases]
+us-east-1 = "us-east-1"
+
+[python]
+symbol = '🐍 '
+format = '[${symbol}${pyenv_prefix}(${version} )]($style)'	
