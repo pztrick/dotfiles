@@ -2,20 +2,19 @@ TERM=xterm-color
 EDITOR=vim
 GIT_EDITOR=vim
 VISUAL=vim
-export PATRICK_BASHRC=.bashrc_patrick
+
 export MYVIMRC='.files/vimrc'
-DEBEMAIL='patrick@astrohaus.com'
-DEBFULLNAME='Patrick Paul'
-export DEBEMAIL DEBFULLNAME
+
+export DEBEMAIL='pztrick@users.noreply.github.com'
+export DEBFULLNAME='Patrick Paul'
+
+export GIT_AUTHOR_NAME="Patrick Paul"
+export GIT_COMMITTER_NAME="Patrick Paul"
+export GIT_AUTHOR_EMAIL=pztrick@users.noreply.github.com
+export GIT_COMMITTER_EMAIL=pztrick@users.noreply.github.com
+
 export GOPATH=/opt/go
 export PATH=$PATH:/usr/local/go/bin:/opt/go/bin:/snap/bin:/home/$USER/.files/scripts
-
-# Android ADT
-if [ -d /home/patrick/adt/ ]; then
-    PATH=$PATH:/home/patrick/adt/sdk/tools
-    PATH=$PATH:/home/patrick/adt/sdk/platform-tools
-    PATH=$PATH:/home/patrick/adt/bin
-fi
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
@@ -151,7 +150,7 @@ fi
 #if [ -f /usr/bin/ssh-askpass ]; then
 #	export SSH_ASKPASS=/usr/bin/ssh-askpass
 #fi
-if [ "$(hostname)" = "puck" ]; then
+if [ "$(hostname)" = "icarus" ]; then
     if [ -z "$DISPLAY" ] && [ -f /usr/bin/keychain ]; then
         [ `whoami` == 'root' ] && HOME=/root
         /usr/bin/keychain --quiet --inherit any $HOME/.ssh/id_rsa
@@ -167,14 +166,6 @@ if [ -n "$PS1" ]; then
     stty ixany
     stty ixoff -ixon
 fi
-
-# RVM
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM
-# note that this overrides cd, and autoenv also does below, killing RVM cd... so you must use .env instead of .rvmrc
-
-# autoenv
-# source /usr/local/bin/activate.sh
 
 # localrc
 if [ -n "$PS1" ] && [ -f ~/.localrc ]; then
@@ -207,13 +198,6 @@ fi
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-# Ansible EC2 path
-# https://aws.amazon.com/blogs/apn/getting-started-with-ansible-and-dynamic-amazon-ec2-inventory-management/
-export ANSIBLE_HOSTS=~/.files/extra/ansible_ec2.py
-export EC2_INI_PATH=~/.files/extra/ansible_ec2.ini
-
-# source /home/patrick/.dvm/dvm.sh || curl -sL https://download.getcarina.com/dvm/latest/install.sh | sh
-
 export PATH_ORIGINAL=$PATH
 
 cd ~
@@ -224,10 +208,12 @@ cd ~
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 
-export VIRTUALENV_PYTHON=$(which python3.7)  # default to py3 for new venvs
+export VIRTUALENV_PYTHON=$(which python3.8)
 
 eval "$(direnv hook bash)"
 export PATH="/home/patrick/.ebcli-virtual-env/executables:$PATH"
 
 export NODE_VERSIONS=/usr/local/n/versions/node  # 
 export NODE_VERSION_PREFIX=""  # no prefix; see: https://github.com/direnv/direnv/wiki/Node
+
+eval "$(starship init bash)"
