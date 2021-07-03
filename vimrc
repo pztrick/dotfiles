@@ -257,3 +257,13 @@ cmap w!! w !sudo tee > /dev/null %
 " Map jj to canceling command T prompt -- not working
 let g:CommandTCancelMap=['<Esc>', '<C-c>', 'jj']
 
+" git rebasing plugin
+function RebaseActionToggle()
+    let line = getline(".")
+    let result = matchstr(line, "^\\a")
+    let transitions = {'p': 'squash', 's': 'edit', 'e': 'fixup', 'f': 'pick'}
+    execute "normal! ^cw" . transitions[result]
+    execute "normal! g0"
+endfunction
+noremap <Cr> :call RebaseActionToggle()<Cr>
+
