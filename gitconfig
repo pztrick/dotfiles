@@ -3,6 +3,7 @@
 	name = patrick
 [push]
 	default = current
+    followTags = true
 [alias]
 	unstage = reset HEAD --
 	uncommit = reset --soft HEAD^
@@ -26,8 +27,9 @@
 	tool = mymeld
 	conflictstyle = diff3
 [mergetool "mymeld"]
-   cmd = $HOME/.files/bin/gitmerge $BASE $LOCAL $REMOTE $MERGED
-
+    cmd = $HOME/.files/bin/gitmerge $BASE $LOCAL $REMOTE $MERGED
+[init]
+    defaultBranch = main
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
