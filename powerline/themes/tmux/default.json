@@ -1,0 +1,29 @@
+{
+	"segments": {
+		"right": [
+			{
+				"function": "powerline.segments.common.sys.cpu_load_percent",
+				"priority": 45
+			},
+			{
+				"function": "powerline.segments.common.sys.uptime",
+				"priority": 50,
+				"args": {
+					"seconds_format": null
+				}
+			},
+			{
+				"function": "powerline.segments.common.net.external_ip",
+				"priority": 999
+			},
+			{
+				"function": "powerline.segments.common.net.hostname",
+				"priority": 999
+			},
+			{
+				"function": "powerline_docker.docker",
+				"priority": 65
+			}
+		]
+	}
+}
