@@ -4,7 +4,7 @@
 		"window_status":        {"fg": "gray70",                    "bg": "gruvbox:dark0_hard",    "attrs": []},
 		"activity_status":      {"fg": "gruvbox:bright_orange",     "bg": "gruvbox:dark0_hard",    "attrs": []},
 		"bell_status":          {"fg": "red",                       "bg": "gruvbox:dark0_hard",    "attrs": []},
-		"window":               {"fg": "white",                     "bg": "gruvbox:dark0_hard",    "attrs": []},
+		"window":               {"fg": "gruvbox:dark0_hard",                     "bg": "gruvbox:dark0_hard",    "attrs": []},
 		"window:divider":       {"fg": "gruvbox:dark0_hard",        "bg": "gruvbox:dark0_hard",    "attrs": []},
 		"window:current":       {"fg": "gruvbox:dark0_hard",        "bg": "gruvbox:dark0_hard", "attrs": []},
 		"window_name":          {"fg": "gruvbox:dark0_hard",        "bg": "gruvbox:bright_yellow", "attrs": ["bold"]},
