@@ -1,6 +1,6 @@
 [user]
-	email = git@foosrank.com
-	name = patrick
+	email = pztrick@users.noreply.github.com
+	name = pztrick@users.noreply.github.com
 [push]
 	default = current
     followTags = true
@@ -21,6 +21,7 @@
 	editor = vim
 	filemode = false
 	excludesfile = ~/.files/gitignore
+	fsmonitor = ~/.files/scripts/git-fsmonitor-watchman.pl
 [color]
 	ui = auto
 [merge]
